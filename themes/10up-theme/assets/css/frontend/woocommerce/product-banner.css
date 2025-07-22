@@ -1,0 +1,133 @@
+.product-banner {
+	align-items: center;
+	border-radius: 20px;
+	display: flex;
+	margin: 60px 0;
+	min-height: 400px;
+	overflow: hidden;
+	padding: 40px;
+}
+
+/* Video covering entire banner */
+.product-banner__video {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+.product-banner__video video {
+	border-radius: 20px;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+
+/* Blue circle badge - "NOPER'S FAVS" */
+.product-banner__icon-text {
+	align-items: center;
+	background: #3f51b5;
+	border-radius: 50%;
+	color: white;
+	display: flex;
+	font-size: var(--wp--preset--font-size--small);
+	font-weight: 700;
+	height: 100px;
+	justify-content: center;
+	line-height: 1.2;
+	position: absolute;
+	right: 20px;
+	text-align: center;
+	top: 20px;
+	width: 100px;
+	z-index: 3;
+}
+
+/* White content box on the left */
+.product-banner__content {
+	align-items: center;
+	background: white;
+	border-radius: 20px;
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-direction: column;
+	padding: 30px;
+	position: relative;
+	width: 446px;
+	z-index: 2;
+}
+
+.product-banner__title {
+	color: var(--wp--preset--color--primary);
+	font-size: var(--wp--preset--font-size--large);
+	font-weight: 600;
+	line-height: 1.2;
+	margin-bottom: 20px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.product-banner__description {
+	margin-bottom: 25px;
+}
+
+.product-banner__description ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.product-banner__description li {
+	color: #333;
+	font-size: var(--wp--preset--font-size--medium);
+	font-weight: 500;
+	margin-bottom: 8px;
+	padding-left: 20px;
+	position: relative;
+}
+
+.product-banner__description li::before {
+	color: var(--wp--preset--color--primary);
+	content: "•";
+	font-size: 1.2rem;
+	font-weight: bold;
+	left: 0;
+	position: absolute;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+	.product-banner__video {
+		min-height: 478px;
+		position: relative;
+	}
+
+	.product-banner__video video {
+		object-position: center;
+		position: absolute;
+	}
+
+	.product-banner {
+		flex-direction: column;
+		justify-content: flex-end;
+		margin: 32px 0;
+		padding: 0;
+	}
+
+	.product-banner__content {
+		width: 100%;
+	}
+
+	.product-banner__title {
+		margin-bottom: 15px;
+	}
+
+	.product-banner__icon-text {
+		height: 80px;
+		right: 15px;
+		top: 15px;
+		width: 80px;
+	}
+}

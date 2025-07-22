@@ -1,0 +1,23 @@
+/* stylelint-disable */
+/*
+ * Ensure that we are not overriding the editor styles of the
+ * WordPress Components.
+ *
+ * This is a workaround for: https://github.com/WordPress/gutenberg/issues/10178
+ *
+ * using :where to prevent the specificity increase of using :not
+ */
+a:where(:not(.components-external-link)) {
+}
+
+.woo-product-button--primary {
+	background-color: var(--wp--preset--color--white);
+	border-radius: 100px;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: 700;
+	padding: 17px 38px;
+	text-align: center;
+	text-transform: uppercase;
+	width: 261px;
+}

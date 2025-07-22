@@ -1,0 +1,30 @@
+{
+  "name": "acf/wavy-block",
+  "title": "Wavy Block",
+  "description": "A block with a wavy text and nopa bottle image that uses ACF fields and GSAP.",
+  "style": "file:../../../assets/css/blocks/wavy.css",
+  "category": "theme",
+  "icon": "admin-comments",
+  "apiVersion": 2,
+  "keywords": ["wavy", "block"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "wavy.php",
+    "postTypes": ["post", "page"]
+  },
+  "styles": [{ "name": "default", "label": "Default", "isDefault": true }],
+  "supports": {
+    "align": true,
+    "alignContent": false,
+    "spacing": {
+      "margin": ["top", "bottom"],
+      "padding": true
+    },
+    "attributes": {
+      "align": {
+        "type": "string",
+        "default": "full"
+      }
+    }
+  }
+}

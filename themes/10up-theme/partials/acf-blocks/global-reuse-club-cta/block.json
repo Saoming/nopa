@@ -1,0 +1,30 @@
+{
+  "name": "acf/global-reuse-club-cta-block",
+  "title": "Global Reuse Club CTA Block",
+  "description": "A CTA block that uses ACF Option fields.",
+  "style": "file:../../../assets/css/blocks/global-reuse-club-cta.css",
+  "category": "theme",
+  "icon": "admin-comments",
+  "apiVersion": 2,
+  "keywords": ["column", "section", "global", "reuse", "cta", "block"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "global-reuse-club-cta.php",
+    "postTypes": ["post", "page"]
+  },
+  "styles": [{ "name": "default", "label": "Default", "isDefault": true }],
+  "supports": {
+    "align": true,
+    "alignContent": false,
+    "spacing": {
+      "margin": ["top", "bottom"],
+      "padding": true
+    },
+    "attributes": {
+      "align": {
+        "type": "string",
+        "default": "full"
+      }
+    }
+  }
+}

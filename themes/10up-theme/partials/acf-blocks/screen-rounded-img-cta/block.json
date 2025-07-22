@@ -1,0 +1,30 @@
+{
+  "name": "acf/screen-rounded-img-cta-block",
+  "title": "Screen Rounded Image CTA Block",
+  "description": "A Short image screen with title and button on the right that uses ACF fields.",
+  "style": "file:../../../assets/css/blocks/screen-rounded-img-cta.css",
+  "category": "theme",
+  "icon": "admin-comments",
+  "apiVersion": 2,
+  "keywords": ["column", "section", "rounded", "about-nopa", "cta", "block"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "screen-rounded-img-cta.php",
+    "postTypes": ["post", "page"]
+  },
+  "styles": [{ "name": "default", "label": "Default", "isDefault": true }],
+  "supports": {
+    "align": true,
+    "alignContent": false,
+    "spacing": {
+      "margin": ["top", "bottom"],
+      "padding": true
+    },
+    "attributes": {
+      "align": {
+        "type": "string",
+        "default": "full"
+      }
+    }
+  }
+}

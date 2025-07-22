@@ -1,0 +1,30 @@
+{
+  "name": "acf/full-width-image-banner-block",
+  "title": "Full Width Image Banner Block",
+  "description": "A full width image banner block that uses ACF fields.",
+  "style": "file:../../../assets/css/blocks/full-width-image-banner.css",
+  "category": "theme",
+  "icon": "admin-comments",
+  "apiVersion": 2,
+  "keywords": ["column", "section", "banner", "full-width", "image", "block"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "full-width-image-banner.php",
+    "postTypes": ["post", "page"]
+  },
+  "styles": [{ "name": "default", "label": "Default", "isDefault": true }],
+  "supports": {
+    "align": true,
+    "alignContent": false,
+    "spacing": {
+      "margin": ["top", "bottom"],
+      "padding": true
+    },
+    "attributes": {
+      "align": {
+        "type": "string",
+        "default": "full"
+      }
+    }
+  }
+}
