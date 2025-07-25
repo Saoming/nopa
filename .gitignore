@@ -7,19 +7,11 @@ phpunit.xml
 uploads
 upgrade
 cache
-plugins/query-monitor
-plugins/woo-viet
-plugins/woo-vietnam-checkout
-plugins/woocommerce
-plugins/debug-bar
-plugins/debug-bar-slow-actions
-log
+plugins
 
 # Project Files
 dist
 backstop_data
-
-# Zipped theme
 
 # Editors
 *.esproj
@@ -43,5 +35,3 @@ tasks.json
 Thumbs.db
 Desktop.ini
 /debug.log
-composer.lock
-package-lock.json
