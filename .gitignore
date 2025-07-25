@@ -1,0 +1,47 @@
+node_modules
+bower_components
+release
+vendor
+phpunit.xml
+.idea
+uploads
+upgrade
+cache
+plugins/query-monitor
+plugins/woo-viet
+plugins/woo-vietnam-checkout
+plugins/woocommerce
+plugins/debug-bar
+plugins/debug-bar-slow-actions
+log
+
+# Project Files
+dist
+backstop_data
+
+# Zipped theme
+
+# Editors
+*.esproj
+*.tmproj
+*.tmproject
+tmtags
+.*.sw[a-z]
+*.un~
+Session.vim
+*.swp
+.vscode/launch.json
+tasks.json
+
+# Mac OSX
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Desktop.ini
+/debug.log
+composer.lock
+package-lock.json
