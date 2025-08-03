@@ -45,6 +45,7 @@ class ExtendWoo implements ModuleInterface {
 		add_action( 'woocommerce_product_query', [ $this, 'custom_pre_get_posts_query' ] );
 		add_action( 'woocommerce_after_single_product', [ $this, 'render_the_additional_content' ], 5 );
 		add_action( 'woocommerce_before_main_content', [ $this, 'show_product_banner' ], 9 );
+		add_action( 'woocommerce_after_main_content', [ $this, 'show_banner_below_product_list' ], 9 );
 		add_action( 'wp_footer', [ $this, 'no_ajax_view_cart_button' ] );
 
 		// Register AJAX handler for cross-sells
@@ -213,6 +214,20 @@ function custom_pre_get_posts_query( $q ) {
 				echo do_shortcode( '[tsf_breadcrumb class="post-breadcrumbs"]' );
 
 				get_template_part( 'partials/woocommerce/product-banner/product', 'banner' );
+	}
+
+	/**
+	* Show banner below product list on WooCommerce product taxonomy archive header
+	*
+	* @return void
+	*/
+	public function show_banner_below_product_list() {
+	   	// Check if it's any WooCommerce archive page
+		if ( ! (is_shop() || is_product_category() || is_product_tag()) ) {
+			return;
+		}
+		// Ensure the banner is only shown on WooCommerce archive pages
+		get_template_part( 'partials/woocommerce/product-banner/banner-below-product-list' );
 	}
 
 	/**
