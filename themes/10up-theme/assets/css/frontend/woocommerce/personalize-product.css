@@ -1,0 +1,191 @@
+#personalize-product-modal{
+}
+#personalize-product-modal .modal__close{
+	position: absolute;
+	top: 48px;
+	right: 72px;
+	z-index: 1;
+	background: none;
+	border: none;
+	cursor: pointer;
+	width: 30px;
+	height: 30px;
+	background: url('../../../images/icon-close.svg') no-repeat center center;
+	background-size: 100%;
+}
+
+#personalize-product-modal .modal__container{
+	padding:48px 60px;
+	width: 1352px;
+	background: url('../../../images/nf-modal-bg.png') no-repeat center center;
+	background-size: cover;
+	background-color: var(--wp--preset--color--accent);
+}
+
+#personalize-product-modal h2{
+	font-family: var(--wp--preset--font-family--chillax);
+	font-size: 40px;
+	line-height: 1.2;
+	font-weight: 600;
+	color: var(--wp--preset--color--primary);
+	text-transform: uppercase;
+	margin-top: 0;
+	margin-bottom: 12px;
+}
+#personalize-product-modal .product-price{
+	font-size: 24px;
+	margin-top: 0;
+	margin-bottom: 12px;
+}
+
+#personalize-product-modal .personalize-product-container{
+	display: flex;
+	flex-direction: row;
+	gap: 40px;
+}
+
+#personalize-product-modal .personalize-product-image{
+	width: 48%;
+}
+
+#personalize-product-modal .personalize-product-options{
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+#personalize-product-modal .personalize-product-tabs-wrapper{
+	border-radius: 20px;
+	background-color: var(--wp--preset--color--tertiary);
+	padding: 40px 70px;
+	overflow: hidden;
+	flex: 1;
+}
+#personalize-product-modal .personalize-product-tabs-header{
+	display: flex;
+	justify-content: space-between;
+	gap: 30px;
+	margin-bottom: 24px;
+}
+#personalize-product-modal .personalize-product-tabs-header h3{
+	cursor: pointer;
+	margin: 0;
+	height: 56px;
+	flex:1;
+	border:1px solid var(--wp--preset--color--white);
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: var(--wp--preset--font-family--satoshi);
+	font-size: 18px;
+	font-weight: 600;
+	color: var(--wp--preset--color--white);
+	text-transform: uppercase;
+	border-radius:28px;
+}
+
+#personalize-product-modal .personalize-product-tabs-header h3:hover,
+#personalize-product-modal .personalize-product-tabs-header h3.active{
+	background-color: var(--wp--preset--color--white);
+	color: var(--wp--preset--color--primary);
+}
+
+#personalize-product-modal .personalize-product-tabs-content{
+	display: none;
+}
+#personalize-product-modal .personalize-product-tabs-content.active{
+	display: block;
+}
+#personalize-product-modal .personalize-product-tabs-content-color-item{
+	border:2px solid var(--wp--preset--color--white);
+	border-radius: 8px;
+	padding: 12px 16px;
+	margin-bottom: 20px;
+}
+#personalize-product-modal .personalize-product-tabs-content-color-item-label{
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+#personalize-product-modal .personalize-product-tabs-content-color-item-label span{
+	font-weight: 600;
+}
+
+#personalize-product-modal .personalize-product-tabs-content-color-item-options{
+	display: flex;
+	gap: 16px;
+}
+#personalize-product-modal .personalize-product-tabs-content-color-item-option {
+	cursor: pointer;
+	position: relative;
+}
+#personalize-product-modal .personalize-product-tabs-content-color-item-option input{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 0;
+	visibility: hidden;
+}
+#personalize-product-modal .personalize-product-tabs-content-color-item-option .color-swatch{
+	display: block;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	position: relative;
+}
+#personalize-product-modal .personalize-product-tabs-content-color-item-option input:checked + .color-swatch{
+	border:2px solid var(--wp--preset--color--primary);
+}
+#personalize-product-modal .personalize-product-tabs-content-color-item-option input:checked + .color-swatch .color-label{
+	color: var(--wp--preset--color--primary);
+}
+#personalize-product-modal .personalize-product-tabs-content-color-item-option input:checked + .color-swatch::before{
+	content: '';
+	display: block;
+	border:2px solid var(--wp--preset--color--white);
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+#personalize-product-modal .personalize-product-tabs-content-text-engraving-wrapper{
+	border:2px solid var(--wp--preset--color--white);
+	border-radius: 8px;
+	padding: 12px 16px;
+	margin-bottom: 20px;
+}
+
+#personalize-product-modal .personalize-product-tabs-content-text-engraving-wrapper label{
+	font-size: 16px;
+	color: #2b2b2b;
+	display: block;
+	margin-bottom: 12px;
+}
+#personalize-product-modal .personalize-product-tabs-content-text-engraving-wrapper input{
+	border:none;
+	height: 56px;
+	border-radius: 26px;
+	padding: 0 30px;
+	width: 100%;
+	font-size: 20px;
+}
+#personalize-product-modal .personalize-product-tabs-content-text-engraving-wrapper .characters-left{
+	font-size: 16px;
+	color: #2b2b2b;
+	display: block;
+	margin-top: 12px;
+	text-align: right;
+}
+
+
+#personalize-product-modal .personalize-product-done-button-wrapper{
+	display: flex;
+	justify-content: center;
+}
+#personalize-product-modal .personalize-product-done-button-wrapper .button{
+	width: auto;
+}

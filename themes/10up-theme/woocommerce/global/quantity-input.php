@@ -33,9 +33,9 @@ $label = ! empty( $args['product_name'] ) ? sprintf( esc_html__( '%s quantity', 
 		 */
 		do_action( 'woocommerce_before_quantity_input_field' );
 
-		if( is_product()) {
+		// if( is_product()) {
 			include( TENUP_THEME_PATH . 'partials/woocommerce/global/quantity-input-standard.php');
-		}
+		// }
 		/**
 		 * Hook to output something after quantity input field
 		 *
