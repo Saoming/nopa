@@ -1,0 +1,76 @@
+.personalize-product-combos-designs{
+	margin-bottom: 40px;
+}
+.personalize-product-combos-designs .personalize-product-combos-designs-title{
+	font-size: 20px;
+	font-weight: 400;
+	color: var(--wp--preset--color--black);
+	margin-bottom: 15px;
+}
+
+.personalize-product-combos-designs-list {
+	display: flex;
+	gap: 12px;
+}
+
+.personalize-product-combos-designs-item {
+	position: relative;
+}
+
+.personalize-product-combos-designs-item label {
+	display: block;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	overflow: hidden;
+	cursor: pointer;
+	position: relative;
+}
+
+.personalize-product-combos-designs-item input[type="radio"] {
+	position: absolute;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.personalize-product-combos-designs-item-image {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border:2px solid transparent;
+	/* background-color: var(--wp--preset--color--white); */
+}
+
+.personalize-product-combos-designs-item input[type="radio"]:checked + .personalize-product-combos-designs-item-image {
+	border: 2px solid #2F17B9;
+	position: relative;
+}
+
+.personalize-product-combos-designs-item input[type="radio"]:checked + .personalize-product-combos-designs-item-image::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	border: 3px solid var(--wp--preset--color--white);
+}
+.personalize-product-combos-designs-item .customization-placeholder{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background-color: var(--wp--preset--color--white);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 24px;
+	font-weight: 600;
+	color: var(--wp--preset--color--primary);
+}
+
+.personalize-your-own-button {
+	/* Add styles for the personalize button */
+}
+

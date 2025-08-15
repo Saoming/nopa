@@ -11,14 +11,14 @@ namespace TenUpTheme;
 
 use TenupFramework\Assets\GetAssetInfo;
 use TenupFramework\Module;
+use TenupFramework\ModuleInterface;
 
 /**
  * Class that created Option page and sub-menus
  *
  * @return void
  */
-class AcfOptionsPage {
-
+class AcfOptionsPage implements ModuleInterface {
 
 	use Module;
 	use GetAssetInfo;

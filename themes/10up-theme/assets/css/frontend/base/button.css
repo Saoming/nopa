@@ -9,7 +9,8 @@
  */
 
 .wp-block-button .wp-element-button,
-.button-primary {
+.button-primary,
+.woo_single_product__container div.product form.cart .button {
 	background-color: var(--wp--preset--color--primary) !important;
 	border: 2px solid var(--wp--preset--color--primary) !important;
 	border-radius: 100px !important;
@@ -29,7 +30,8 @@
 }
 
 .wp-block-button .wp-element-button:hover,
-.button-primary:hover {
+.button-primary:hover,
+.woo_single_product__container div.product form.cart .button:hover {
 	background-color: var(--wp--preset--color--white) !important;
 	border: 2px solid var(--wp--preset--color--white) !important;
 	color: var(--wp--preset--color--primary) !important;
