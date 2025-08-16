@@ -81,6 +81,10 @@ class ExtendWoo implements ModuleInterface {
 
 		// ajax update cart info
 		add_action( 'woocommerce_add_to_cart_fragments', [ $this, 'handle_woocommerce_add_to_cart_fragments' ] );
+
+		// ajax update mini cart
+		add_action( 'wp_ajax_update_mini_cart', [ $this, 'handle_update_mini_cart' ] );
+		add_action( 'wp_ajax_nopriv_update_mini_cart', [ $this, 'handle_update_mini_cart' ] );
 	}
 
 
@@ -355,5 +359,29 @@ class ExtendWoo implements ModuleInterface {
 
 		// Add swatches to our preferred position - before the title
 		add_action( 'woocommerce_shop_loop_item_title', array( $wvs_pro_archive, 'after_shop_loop_item' ), 7 );
+	}
+
+	/**
+	 * AJAX handler to update mini cart
+	 */
+	public function handle_update_mini_cart() {
+		$cart_item_key = isset( $_POST['cart_item_key'] ) ? sanitize_text_field( $_POST['cart_item_key'] ) : '';
+		$quantity      = isset( $_POST['quantity'] ) ? intval( $_POST['quantity'] ) : 0;
+
+		if ( empty( $cart_item_key ) || $quantity <= 0 ) {
+			wp_send_json_error( 'Invalid request' );
+		}
+
+		WC()->cart->set_quantity( $cart_item_key, $quantity );
+
+		// also return cart total
+		$cart_total = WC()->cart->get_cart_total();
+
+		wp_send_json_success(
+			array(
+				'cart_contents_count' => WC()->cart->get_cart_contents_count(),
+				'cart_total' => $cart_total,
+			)
+		);
 	}
 }

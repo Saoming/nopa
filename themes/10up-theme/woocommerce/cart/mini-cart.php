@@ -76,16 +76,16 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 
 						<div class="item-actions">
 							<div class="quantity-controls">
-								<button class="qty-decrease" data-cart-item-key="<?php echo esc_attr( $cart_item_key ); ?>" data-quantity="<?php echo esc_attr( $cart_item['quantity'] - 1 ); ?>">-</button>
+								<button class="qty-decrease" data-cart-item-key="<?php echo esc_attr( $cart_item_key ); ?>" data-quantity="<?php echo esc_attr( $cart_item['quantity'] - 1 ); ?>"><span class="icon-minus">-</span></button>
 								<span class="qty-amount"><?php echo esc_html( $cart_item['quantity'] ); ?></span>
-								<button class="qty-increase" data-cart-item-key="<?php echo esc_attr( $cart_item_key ); ?>" data-quantity="<?php echo esc_attr( $cart_item['quantity'] + 1 ); ?>">+</button>
+								<button class="qty-increase" data-cart-item-key="<?php echo esc_attr( $cart_item_key ); ?>" data-quantity="<?php echo esc_attr( $cart_item['quantity'] + 1 ); ?>"><span class="icon-plus">+</span></button>
 							</div>
 
 							<?php
 							echo apply_filters( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 								'woocommerce_cart_item_remove_link',
 								sprintf(
-									'<a href="%s" class="remove remove_from_cart_button" aria-label="%s" data-product_id="%s" data-cart_item_key="%s" data-product_sku="%s">&times;</a>',
+									'<a href="%s" class="remove remove_from_cart_button" aria-label="%s" data-product_id="%s" data-cart_item_key="%s" data-product_sku="%s"></a>',
 									esc_url( wc_get_cart_remove_url( $cart_item_key ) ),
 									/* translators: %s is the product name */
 									esc_attr( sprintf( __( 'Remove %s from cart', 'woocommerce' ), wp_strip_all_tags( $product_name ) ) ),

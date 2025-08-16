@@ -50,7 +50,7 @@
 	align-items: center;
 	background: white;
 	border-radius: 20px;
-	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 8px 32px rgb(0 0 0 / 10%);
 	display: flex;
 	flex-direction: column;
 	padding: 30px;
@@ -80,7 +80,7 @@
 }
 
 .product-banner__description li {
-	color: #333;
+	color: var(--wp--preset--color--neutral-black, #333);;
 	font-size: var(--wp--preset--font-size--medium);
 	font-weight: 500;
 	margin-bottom: 8px;
@@ -92,13 +92,14 @@
 	color: var(--wp--preset--color--primary);
 	content: "•";
 	font-size: 1.2rem;
-	font-weight: bold;
+	font-weight: 700;
 	left: 0;
 	position: absolute;
 }
 
 /* Mobile Responsive */
-@media (max-width: 768px) {
+@media (width <= 768px) {
+
 	.product-banner__video {
 		min-height: 478px;
 		position: relative;
