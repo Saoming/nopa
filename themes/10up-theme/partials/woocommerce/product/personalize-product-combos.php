@@ -16,12 +16,12 @@ $base_default    = get_field( 'base_default', $product_id );
 if ( have_rows( 'color_combos', $product_id ) ) :
 	$color_combos_title = get_field( 'color_combos_title', $product_id );
 	?>
-<div class="personalize-product-combos-designs combo-designs">
+<div class="pp-combos-designs combo-designs">
 	<?php if ( $color_combos_title ) : ?>
-		<div class="personalize-product-combos-designs-title"><?php echo esc_html( $color_combos_title ); ?></div>
+		<div class="pp-combos-designs-title"><?php echo esc_html( $color_combos_title ); ?></div>
 	<?php endif; ?>
 
-	<div class="personalize-product-combos-designs-list">
+	<div class="pp-combos-designs-list">
 		<?php
 		$combo_index = 0; // Add counter for unique IDs
 		while ( have_rows( 'color_combos', $product_id ) ) : the_row();
@@ -31,7 +31,7 @@ if ( have_rows( 'color_combos', $product_id ) ) :
 			$product_image = get_sub_field( 'product_image', $product_id );
 			$combo_id = 'color_combo_' . $combo_index; // Create unique ID
 			?>
-			<div class="personalize-product-combos-designs-item">
+			<div class="pp-combos-designs-item">
 				<input
 					type="radio"
 					id="<?php echo esc_attr( $combo_id ); ?>"
@@ -45,7 +45,7 @@ if ( have_rows( 'color_combos', $product_id ) ) :
 						checked
 					<?php endif; ?>
 				/>
-				<label for="<?php echo esc_attr( $combo_id ); ?>" class="personalize-product-combos-designs-item-image">
+				<label for="<?php echo esc_attr( $combo_id ); ?>" class="pp-combos-designs-item-image">
 					<?php echo wp_get_attachment_image( $product_image['ID'], 'full' ); ?>
 				</label>
 			</div>
@@ -53,23 +53,23 @@ if ( have_rows( 'color_combos', $product_id ) ) :
 		$combo_index++; // Increment counter
 		endwhile;
 		?>
-	</div><!-- .personalize-product-combos-designs-list -->
-</div><!-- .personalize-product-combos-designs -->
+	</div><!-- .pp-combos-designs-list -->
+</div><!-- .pp-combos-designs -->
 	<?php
 endif;
 ?>
 
-<div class="personalize-product-combos-designs custom-designs">
-	<div class="personalize-product-combos-designs-title"><?php esc_html_e( 'Your Designs:', 'tenup-theme' ); ?></div>
-	<div class="personalize-product-combos-designs-list">
-		<div class="personalize-product-combos-designs-item">
+<div class="pp-combos-designs custom-designs">
+	<div class="pp-combos-designs-title"><?php esc_html_e( 'Your Designs:', 'tenup-theme' ); ?></div>
+	<div class="pp-combos-designs-list">
+		<div class="pp-combos-designs-item">
 			<div class="customization-placeholder">
 				<span>?</span>
 			</div>
 		</div>
 		<?php
 		for ($i = 0; $i < 4; $i++) :?>
-		<div class="personalize-product-combos-designs-item">
+		<div class="pp-combos-designs-item">
 			<div class="customization-placeholder">
 				<span>?</span>
 			</div>

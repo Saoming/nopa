@@ -23,20 +23,20 @@ $product_colors = get_field( 'product_colors', 'option' );
 				?>
 				<p class="product-price"><?php echo $price; ?></p>
 
-				<div class="personalize-product-container">
+				<div class="product-container">
 
-					<div class="personalize-product-image">
+					<div class="pp-image">
 						<?php echo get_the_post_thumbnail( $product_id, 'full' ); ?>
 					</div>
 
-					<div class="personalize-product-options">
-						<div class="personalize-product-tabs-wrapper">
-							<div class="personalize-product-tabs-header">
+					<div class="pp-options">
+						<div class="pp-tabs-wrapper">
+							<div class="pp-tabs-header">
 								<h3 data-tab="color" class="active"><?php _e( 'Color', 'tenup-theme' ); ?></h3>
 								<h3 data-tab="text-engraving"><?php _e( 'Text Engraving', 'tenup-theme' ); ?></h3>
 							</div>
 
-							<div class="personalize-product-tabs-content personalize-product-tabs-content-color active">
+							<div class="pp-tabs-content pp-tabs-content-color active">
 
 								<?php
 								$parts = [ 'top_lid', 'sip_lid', 'base' ];
@@ -46,8 +46,8 @@ $product_colors = get_field( 'product_colors', 'option' );
 									$default = get_field( "{$part}_default", $product_id ) ? get_field( "{$part}_default", $product_id ) : $colors[0]['value'];
 
 									if ( $colors ) {
-										echo '<div class="personalize-product-tabs-content-color-item"><div class="personalize-product-tabs-content-color-item-label">' . esc_html( ucwords( str_replace( '_', ' ', $part ) ) ) . ' ' . esc_html__( 'Color', 'tenup-theme' ) . ': <span>' . esc_html( $default['label'] ) . '</span></div>';
-										echo '<div class="personalize-product-tabs-content-color-item-options">';
+										echo '<div class="pp-tabs-content-color-item"><div class="pp-tabs-content-color-item-label">' . esc_html( ucwords( str_replace( '_', ' ', $part ) ) ) . ' ' . esc_html__( 'Color', 'tenup-theme' ) . ': <span>' . esc_html( $default['label'] ) . '</span></div>';
+										echo '<div class="pp-tabs-content-color-item-options">';
 										foreach ( $colors as $color ) {
 											$checked = ( $color['value'] === $default['value'] ) ? 'checked' : '';
 
@@ -60,7 +60,7 @@ $product_colors = get_field( 'product_colors', 'option' );
 												}
 											}
 
-											echo '<label class="personalize-product-tabs-content-color-item-option">
+											echo '<label class="pp-tabs-content-color-item-option">
 													<input type="radio" name="' . esc_attr( $part ) . '_color" value="' . esc_attr( $color['value'] ) . '" ' . esc_attr( $checked ) . ' aria-label="' . esc_attr( $color['label'] ) . '">
 													<span class="color-swatch" style="background-color: ' . esc_attr( $product_color ) . '"></span>
 												</label>';
@@ -71,28 +71,28 @@ $product_colors = get_field( 'product_colors', 'option' );
 								}
 								?>
 
-							</div><!-- .personalize-product-tabs-content-color -->
+							</div><!-- .pp-tabs-content-color -->
 
-							<div class="personalize-product-tabs-content personalize-product-tabs-content-text-engraving">
+							<div class="pp-tabs-content pp-tabs-content-text-engraving">
 
-								<div class="personalize-product-tabs-content-text-engraving-wrapper">
+								<div class="pp-tabs-content-text-engraving-wrapper">
 									<label for="engraving_text"><?php _e( 'Write Text (Optional):', 'tenup-theme' ); ?></label>
 									<input type="text" name="engraving_text" id="engraving_text" maxlength="30" placeholder="<?php _e('Enter', 'tenup-theme'); ?>">
 									<div class="characters-left"><?php _e('0/30 characters', 'tenup-theme'); ?></div>
 								</div>
 
-							</div><!-- .personalize-product-tabs-content-text-engraving -->
+							</div><!-- .pp-tabs-content-text-engraving -->
 
-							<div class="personalize-product-done-button-wrapper">
-								<button class="personalize-product-done-button button" type="button" data-micromodal-close>
+							<div class="pp-done-button-wrapper">
+								<button class="pp-done-button button" type="button" data-micromodal-close>
 									<?php _e( 'Done', 'tenup-theme' ); ?>
 								</button>
 							</div>
 
-						</div><!-- .personalize-product-tabs-wrapper -->
-					</div><!-- .personalize-product-options -->
+						</div><!-- .pp-tabs-wrapper -->
+					</div><!-- .pp-options -->
 
-				</div><!-- .personalize-product-container -->
+				</div><!-- .product-container -->
 
 			</div><!-- .personalize-product -->
 
