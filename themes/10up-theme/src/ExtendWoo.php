@@ -83,8 +83,7 @@ class ExtendWoo implements ModuleInterface {
 		add_action( 'woocommerce_add_to_cart_fragments', [ $this, 'handle_woocommerce_add_to_cart_fragments' ] );
 
 		// ajax update mini cart
-		add_action( 'wp_ajax_update_mini_cart', [ $this, 'handle_update_mini_cart' ] );
-		add_action( 'wp_ajax_nopriv_update_mini_cart', [ $this, 'handle_update_mini_cart' ] );
+		add_action( 'wc_ajax_update_mini_cart_quantity', [ $this, 'handle_update_mini_cart_quantity' ] );
 	}
 
 
@@ -364,7 +363,7 @@ class ExtendWoo implements ModuleInterface {
 	/**
 	 * AJAX handler to update mini cart
 	 */
-	public function handle_update_mini_cart() {
+	public function handle_update_mini_cart_quantity() {
 		$cart_item_key = isset( $_POST['cart_item_key'] ) ? sanitize_text_field( $_POST['cart_item_key'] ) : '';
 		$quantity      = isset( $_POST['quantity'] ) ? intval( $_POST['quantity'] ) : 0;
 
