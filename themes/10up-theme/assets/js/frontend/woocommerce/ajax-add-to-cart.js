@@ -1,6 +1,12 @@
 import jQuery from 'jquery';
 
 (function ($) {
+	// open mini-cart
+	const openMiniCart = () => {
+		$('#cart-drawer').addClass('open');
+		$('body').addClass('cart-drawer-open');
+	};
+
 	// Ajax add to cart on the product page
 	const $warp_fragment_refresh = {
 		// eslint-disable-next-line no-undef
@@ -45,6 +51,11 @@ import jQuery from 'jquery';
 				$.ajax($warp_fragment_refresh);
 
 				$('.entry-summary').unblock();
+
+				// open mini-cart
+				setTimeout(function () {
+					openMiniCart();
+				}, 300);
 			},
 		);
 	});

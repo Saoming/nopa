@@ -7,6 +7,7 @@ import Wavy from './blocks/wavy';
 // import './woocommerce/cross-sell';
 import './woocommerce/ajax-add-to-cart';
 import './woocommerce/personalize-product';
+import './woocommerce/mini-cart';
 
 // Class Components
 const header = new Header();

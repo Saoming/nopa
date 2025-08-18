@@ -1,4 +1,5 @@
-@media (max-width: 768px) {
+@media (width <= 768px) {
+
 	.post-breadcrumbs {
 		padding: 0 16px;
 	}
@@ -30,9 +31,9 @@
 }
 
 .woocommerce:where(body:not(.woocommerce-uses-block-theme))
-	ul.products
-	li.product
-	.price {
+ul.products
+li.product
+.price {
 	color: var(--wp--preset--color--neutral-black);
 	font-size: var(--wp--preset--font-size--medium);
 	line-height: 1.2;

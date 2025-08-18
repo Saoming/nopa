@@ -6,18 +6,31 @@ import jQuery from 'jquery';
 MicroModal.init();
 
 (function ($) {
+	// Constants for color types
+	const COLOR_TYPES = ['top_lid_color', 'sip_lid_color', 'base_color'];
+
+	// Helper function to get selected colors
+	function getSelectedColors() {
+		return COLOR_TYPES.reduce((colors, colorType) => {
+			colors[colorType] = $(
+				`.pp-tabs-content-color-item-option input[name="${colorType}"]:checked`,
+			).val();
+			return colors;
+		}, {});
+	}
+
 	// show/hide tabs content/tabs header
-	$('.personalize-product-tabs-header h3').on('click', function (e) {
+	$('.pp-tabs-header h3').on('click', function (e) {
 		e.preventDefault();
 		$(this).siblings().removeClass('active');
 		const tab = $(this).data('tab');
-		$('.personalize-product-tabs-content').removeClass('active');
-		$(`.personalize-product-tabs-content-${tab}`).addClass('active');
+		$('.pp-tabs-content').removeClass('active');
+		$(`.pp-tabs-content-${tab}`).addClass('active');
 		$(this).addClass('active');
 	});
 
-	// change '.personalize-product-tabs-content-color-item-label span' text to the value of radio button is changed
-	$('.personalize-product-tabs-content-color-item-option input').on('change', function () {
+	// change '.pp-tabs-content-color-item-label span' text to the value of radio button is changed
+	$('.pp-tabs-content-color-item-option input').on('change', function () {
 		// get aria-label of the input
 		const ariaLabel = $(this).attr('aria-label');
 
@@ -25,7 +38,7 @@ MicroModal.init();
 			.parent()
 			.parent()
 			.parent()
-			.find('.personalize-product-tabs-content-color-item-label span');
+			.find('.pp-tabs-content-color-item-label span');
 		label.text(ariaLabel);
 	});
 
@@ -38,15 +51,15 @@ MicroModal.init();
 	});
 
 	// when clicked "done" button, add items to "your designs" section
-	$('.personalize-product-done-button').on('click', function () {
+	$('.pp-done-button').on('click', function () {
 		// only append 5 items
-		const combo_items = $(
-			'.personalize-product-combos-designs.combo-designs .personalize-product-combos-designs-list',
-		).find('.personalize-product-combos-designs-item input[type="radio"]');
+		const combo_items = $('.pp-combos-designs.combo-designs .pp-combos-designs-list').find(
+			'.pp-combos-designs-item input[type="radio"]',
+		);
 
-		const custom_items = $(
-			'.personalize-product-combos-designs.custom-designs .personalize-product-combos-designs-list',
-		).find('.personalize-product-combos-designs-item input[type="radio"]');
+		const custom_items = $('.pp-combos-designs.custom-designs .pp-combos-designs-list').find(
+			'.pp-combos-designs-item input[type="radio"]',
+		);
 
 		const count_start = combo_items.length + custom_items.length;
 
@@ -54,20 +67,13 @@ MicroModal.init();
 			return;
 		}
 
-		// get selected colors
-		const top_lid_color = $(
-			'.personalize-product-tabs-content-color-item-option input[name="top_lid_color"]:checked',
-		).val();
-		const sip_lid_color = $(
-			'.personalize-product-tabs-content-color-item-option input[name="sip_lid_color"]:checked',
-		).val();
-		const base_color = $(
-			'.personalize-product-tabs-content-color-item-option input[name="base_color"]:checked',
-		).val();
+		// get selected colors using helper function
+		const selectedColors = getSelectedColors();
+		const { top_lid_color, sip_lid_color, base_color } = selectedColors;
 
 		// get selected combo
 		const selected_combo = $(
-			'.personalize-product-combos-designs .personalize-product-combos-designs-item input[name="selected_color_combo"]:checked',
+			'.pp-combos-designs .pp-combos-designs-item input[name="selected_color_combo"]:checked',
 		);
 
 		if (selected_combo.length > 0) {
@@ -90,7 +96,7 @@ MicroModal.init();
 		const image_file_name = `${top_lid_color}-${sip_lid_color}-${base_color}.png`;
 
 		// append new item
-		$('.personalize-product-combos-designs .personalize-product-combos-designs-item')
+		$('.pp-combos-designs .pp-combos-designs-item')
 			.eq(count_start)
 			.html(
 				`
@@ -105,7 +111,7 @@ MicroModal.init();
 					data-image="490"
 					checked
 				/>
-				<label for="color_combo_${count_start}" class="personalize-product-combos-designs-item-image">
+				<label for="color_combo_${count_start}" class="pp-combos-designs-item-image">
 					<img width="100" height="100"
 						src="${window.tenup_theme_woocommerce.template_url}/assets/images/personalize-product/product-${image_file_name}"
 						onerror="this.onerror=null; this.src='${window.tenup_theme_woocommerce.template_url}/assets/images/personalize-product/nopa-product-placeholder.png';"
@@ -115,10 +121,10 @@ MicroModal.init();
 			);
 	});
 
-	// on changing radio button under '.personalize-product-combos-designs .personalize-product-combos-designs-item', change the values of related input fields under ".personalize-product-modal"
+	// on changing radio button under '.pp-combos-designs .pp-combos-designs-item', change the values of related input fields under ".personalize-product-modal"
 	$(document).on(
 		'change',
-		'.personalize-product-combos-designs .personalize-product-combos-designs-item input[type="radio"]',
+		'.pp-combos-designs .pp-combos-designs-item input[type="radio"]',
 		function () {
 			// get the data-top-lid, data-sip-lid, data-base, data-image values
 			const top_lid = $(this).data('top-lid');
