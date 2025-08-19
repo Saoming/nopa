@@ -1,1 +1,0 @@
-/Users/samueltirtawidjaja/Local Sites/nopa/app/public/wp-content/plugins/query-monitor/wp-content/db.php
