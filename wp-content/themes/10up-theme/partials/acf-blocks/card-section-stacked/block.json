@@ -1,0 +1,30 @@
+{
+  "name": "acf/card-section-stacked-block",
+  "title": "Card Section Stacked Block",
+  "description": "A multiple section that is stacked when you scrolled that uses ACF fields and GSAP.",
+  "style": "file:../../../assets/css/blocks/card-section-stacked.css",
+  "category": "theme",
+  "icon": "admin-comments",
+  "apiVersion": 2,
+  "keywords": ["card", "section", "stacked", "block"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "card-section-stacked.php",
+    "postTypes": ["post", "page"]
+  },
+  "styles": [{ "name": "default", "label": "Default", "isDefault": true }],
+  "supports": {
+    "align": true,
+    "alignContent": false,
+    "spacing": {
+      "margin": ["top", "bottom"],
+      "padding": true
+    },
+    "attributes": {
+      "align": {
+        "type": "string",
+        "default": "full"
+      }
+    }
+  }
+}

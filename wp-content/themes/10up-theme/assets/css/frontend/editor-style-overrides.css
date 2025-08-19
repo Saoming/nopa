@@ -1,0 +1,75 @@
+/**
+ * TenUpTheme - Editor Style Overrides
+ * https://project-website.tld
+ *
+ * Copyright (c) 2017 10up
+ * Licensed under the MIT license.
+ */
+
+.panel-card-image {
+	margin-bottom: 8px;
+}
+
+.panel-card-image img {
+	max-height: 32px;
+}
+
+.two-column-img-text-right {
+	align-items: center;
+	display: flex;
+	gap: 75px;
+}
+
+.card-title {
+	color: var(--wp--preset--color--primary);
+	font-size: 4rem;
+	line-height: 64px;
+	margin-bottom: 10px;
+	margin-top: 0;
+}
+
+.card-description {
+	font-size: 1.5rem;
+	margin-bottom: 96px;
+	margin-top: 0;
+}
+
+.button-primary:where(:not(.components-button)) {
+	background-color: var(--wp--preset--color--primary);
+	border: 2px solid var(--wp--preset--color--primary);
+	border-radius: 100px;
+	color: var(--wp--preset--color--white);
+	cursor: pointer;
+	font-size: var(--wp--preset--font-size--medium);
+	font-weight: 600;
+	padding: 17px 58px;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: background 300ms ease-in;
+}
+
+.button-primary:hover:where(:not(.components-button)) {
+	background-color: var(--wp--preset--color--white);
+	border: 2px solid var(--wp--preset--color--white);
+	color: var(--wp--preset--color--primary);
+}
+
+.button-secondary:where(:not(.components-button)) {
+	background-color: var(--wp--preset--color--white);
+	border: 2px solid var(--wp--preset--color--white);
+	border-radius: 100px;
+	color: var(--wp--preset--color--primary);
+	cursor: pointer;
+	font-size: var(--wp--preset--font-size--medium);
+	font-weight: 600;
+	padding: 17px 58px;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: background 300ms ease-in;
+}
+
+.button-secondary:hover:where(:not(.components-button)) {
+	background-color: var(--wp--preset--color--primary);
+	border: 2px solid var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--white);
+}

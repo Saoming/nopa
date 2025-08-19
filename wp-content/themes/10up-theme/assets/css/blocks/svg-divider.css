@@ -1,0 +1,43 @@
+.svg-divider__inner {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 1rem;
+}
+
+.svg-divider__left,
+.svg-divider__right {
+	flex: 1 1 50%;
+}
+
+.svg-divider__right:not(.right-is-style-2) {
+	top: 0;
+	position: absolute;
+	right: 0;
+}
+
+:is(.svg-divider__right.right-is-style-2) {
+	bottom: 0;
+	position: absolute;
+	right: 0;
+}
+
+.svg-divider__left svg,
+.svg-divider__right svg {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+/* Mobile stacking */
+@media (max-width: 768px) {
+	.svg-divider__inner {
+		flex-direction: column;
+	}
+
+	.svg-divider__left,
+	.svg-divider__right {
+		flex: 1 1 100%;
+	}
+}

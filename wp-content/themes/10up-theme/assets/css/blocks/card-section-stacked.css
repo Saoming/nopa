@@ -1,0 +1,90 @@
+.card-section-stacked {
+	margin: 0;
+	overflow: hidden;
+	padding: 0px;
+}
+
+.card-section-stacked .card-section-stacked__inner {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	position: relative;
+}
+
+.card-section-stacked .card-section-stacked__item {
+	left: 0;
+	right: 0;
+	top: 0;
+	width: 100%;
+}
+
+.card-section-stacked .card-section-stacked__item-inner {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	margin: 0 auto;
+	max-width: 1290px;
+	padding: 0;
+}
+
+.card-section-stacked .card-section-stacked__image {
+	max-width: 500px;
+	width: 100%;
+}
+
+.card-section-stacked .card-section-stacked__image img {
+	border-radius: 0;
+	height: auto;
+	width: 100%;
+}
+
+.card-section-stacked .card-section-stacked__content {
+	max-width: 600px;
+	text-align: center;
+	width: 100%;
+}
+
+.card-section-stacked .card-section-stacked__title {
+	font-size: var(--wp--preset--font-size--extra-large);
+	font-weight: 700;
+	line-height: 1.2;
+	margin-bottom: 1rem;
+	margin-top: 0;
+	text-transform: uppercase;
+}
+
+.card-section-stacked .card-section-stacked__desc {
+	color: var(--wp--preset--color--neutral-black);
+	font-size: 1.125rem;
+	line-height: 1.6;
+	margin-top: 0;
+}
+
+@media (min-width: 768px) {
+	.card-section-stacked .card-section-stacked__item {
+		position: absolute;
+	}
+
+	.card-section-stacked .card-section-stacked__item-inner {
+		flex-direction: row;
+		padding: 4rem 0;
+		text-align: left;
+	}
+
+	.card-section-stacked .card-section-stacked__content {
+		flex: 1;
+		max-width: 50%;
+		text-align: left;
+	}
+
+	.card-section-stacked .card-section-stacked__image {
+		flex: 1;
+		max-width: 50%;
+	}
+
+	.card-section-stacked .card-section-stacked__image img {
+		border-radius: 20px;
+		height: auto;
+	}
+}

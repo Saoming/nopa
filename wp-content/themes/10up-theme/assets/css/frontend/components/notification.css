@@ -1,0 +1,17 @@
+.top-banner {
+	background-color: var(--wp--preset--color--primary);
+}
+
+.top-banner__text {
+	color: var(--wp--preset--color--white);
+	font-size: 0.75rem;
+	margin: 0;
+	padding: 6px 10px 13px;
+	text-align: center;
+}
+
+@media (--bp-medium) {
+	.top-banner__text {
+		font-size: 1.25rem;
+	}
+}
