@@ -1,0 +1,56 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "title": "Two Column Image Text Right Block",
+  "description": "Two Column Image Text Right Block for displaying an image on the left and text on the right.",
+  "textdomain": "tenup-theme",
+  "name": "tenup/two-column-img-text-right",
+  "icon": "format-image",
+  "keywords": [
+    "card",
+    "image",
+    "button",
+    "column"
+  ],
+  "category": "formatting",
+  "attributes": {
+    "blockId": {
+      "type": "string"
+    },
+    "imageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "title": {
+      "type": "string",
+      "default": "Card Title"
+    },
+    "description": {
+      "type": "string",
+      "default": "Card description goes here."
+    },
+    "buttonText": {
+      "type": "string",
+      "default": "Learn More"
+    },
+    "buttonUrl": {
+      "type": "string",
+      "default": "#"
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ],
+    "spacing": {
+      "margin": [
+        "top",
+        "bottom"
+      ],
+      "padding": true
+    }
+  },
+  "editorScript": "file:./index.js"
+}
