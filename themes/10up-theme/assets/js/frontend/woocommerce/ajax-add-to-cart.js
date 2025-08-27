@@ -21,6 +21,7 @@ import jQuery from 'jquery';
 				});
 
 				$(document.body).trigger('wc_fragments_refreshed');
+				openMiniCart();
 			}
 		},
 	};
@@ -51,11 +52,6 @@ import jQuery from 'jquery';
 				$.ajax($warp_fragment_refresh);
 
 				$('.entry-summary').unblock();
-
-				// open mini-cart
-				setTimeout(function () {
-					openMiniCart();
-				}, 300);
 			},
 		);
 	});
