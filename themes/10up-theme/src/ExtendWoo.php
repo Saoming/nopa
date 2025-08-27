@@ -40,7 +40,7 @@ class ExtendWoo implements ModuleInterface {
 		add_action( 'init', [ $this, 'setup_variation_swatches' ] );
 		add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_woocommerce_cart_scripts' ] );
 		add_action( 'woocommerce_before_shop_loop_item_title', array( $this, 'change_single_product_content' ), 1 );
-		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_woocommerce_assets' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_woocommerce_assets' ), 1 );
 		// localize the custom variables
 		add_action( 'wp_enqueue_scripts', [ $this, 'localize_custom_variables' ] );
 		add_filter( 'woocommerce_demo_store', [ $this, 'modify_woocommerce_demo_store' ], 10, 2 );
