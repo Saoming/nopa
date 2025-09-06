@@ -1,10 +1,171 @@
-.full-width-image-banner{contain:layout style paint;left:50%;margin-left:-50vw;margin-right:-50vw;overflow:hidden;position:relative;right:50%;width:100vw}.full-width-image-banner__inner{align-items:center;display:flex;height:auto;justify-content:center;position:relative;width:100%}.full-width-image-banner__image-wrapper{display:block;height:auto;line-height:0;position:relative;width:100%}.full-width-image-banner__image-wrapper img{backface-visibility:hidden;border-radius:0;display:block;height:auto;max-width:none;-o-object-fit:cover;object-fit:cover;-o-object-position:center;object-position:center;transform:translateZ(0);width:100%;will-change:auto}.full-width-image-banner--breakout{left:50%;margin:0;position:relative;transform:translateX(-50%);width:100vw}.full-width-image-banner__image-wrapper.loading{animation:loading 2s infinite;background:linear-gradient(90deg,#f0f0f0 25%,#e0e0e0 50%,#f0f0f0 75%);background-size:200% 100%}@keyframes loading{0%{background-position:200% 0}to{background-position:-200% 0}}.full-width-image-banner--aspect-21-9 .full-width-image-banner__image-wrapper{aspect-ratio:21/9}.full-width-image-banner--aspect-16-9 .full-width-image-banner__image-wrapper{aspect-ratio:16/9}.full-width-image-banner--aspect-4-3 .full-width-image-banner__image-wrapper{aspect-ratio:4/3}.full-width-image-banner--aspect-3-2 .full-width-image-banner__image-wrapper{aspect-ratio:3/2}.full-width-image-banner--height-small .full-width-image-banner__image-wrapper{height:200px}.full-width-image-banner--height-medium
-	.full-width-image-banner__image-wrapper{height:400px}.full-width-image-banner--height-large .full-width-image-banner__image-wrapper{height:600px}.full-width-image-banner--height-xl .full-width-image-banner__image-wrapper{height:800px}.full-width-image-banner--position-top
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./assets/css/blocks/full-width-image-banner.css ***!
+  \***********************************************************************************************************************************************************************************************************/
+/* Full Width Image Banner Component */
+.full-width-image-banner {
+	contain: layout style paint;
+	left: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+	overflow: hidden;
+	position: relative;
+	right: 50%;
+	width: 100vw;
+}
+.full-width-image-banner__inner {
+	align-items: center;
+	display: flex;
+	height: auto;
+	justify-content: center;
+	position: relative;
+	width: 100%;
+}
+.full-width-image-banner__image-wrapper {
+	display: block;
+	height: auto;
+	line-height: 0;
+	position: relative;
+	width: 100%;
+}
+.full-width-image-banner__image-wrapper img {
+	backface-visibility: hidden;
+	border-radius: 0;
+	display: block;
+	height: auto;
+	max-width: none;
+	-o-object-fit: cover;
+	   object-fit: cover;
+	-o-object-position: center;
+	   object-position: center;
+	transform: translateZ(0);
+	will-change: auto;
+	width: 100%;
+}
+/* Alternative approach for containers with max-width constraints */
+.full-width-image-banner--breakout {
+	left: 50%;
+	margin: 0;
+	position: relative;
+	transform: translateX(-50%);
+	width: 100vw;
+}
+/* Loading state */
+.full-width-image-banner__image-wrapper.loading {
+	animation: loading 2s infinite;
+	background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+	background-size: 200% 100%;
+}
+@keyframes loading {
+	0% {
+		background-position: 200% 0;
+	}
+	100% {
+		background-position: -200% 0;
+	}
+}
+/* Aspect ratio variants */
+.full-width-image-banner--aspect-21-9 .full-width-image-banner__image-wrapper {
+	aspect-ratio: 21 / 9;
+}
+.full-width-image-banner--aspect-16-9 .full-width-image-banner__image-wrapper {
+	aspect-ratio: 16 / 9;
+}
+.full-width-image-banner--aspect-4-3 .full-width-image-banner__image-wrapper {
+	aspect-ratio: 4 / 3;
+}
+.full-width-image-banner--aspect-3-2 .full-width-image-banner__image-wrapper {
+	aspect-ratio: 3 / 2;
+}
+/* Height variants */
+.full-width-image-banner--height-small .full-width-image-banner__image-wrapper {
+	height: 200px;
+}
+.full-width-image-banner--height-medium
+	.full-width-image-banner__image-wrapper {
+	height: 400px;
+}
+.full-width-image-banner--height-large .full-width-image-banner__image-wrapper {
+	height: 600px;
+}
+.full-width-image-banner--height-xl .full-width-image-banner__image-wrapper {
+	height: 800px;
+}
+/* Object position variants */
+.full-width-image-banner--position-top
 	.full-width-image-banner__image-wrapper
-	img{-o-object-position:top center;object-position:top center}.full-width-image-banner--position-bottom
+	img {
+	-o-object-position: top center;
+	   object-position: top center;
+}
+.full-width-image-banner--position-bottom
 	.full-width-image-banner__image-wrapper
-	img{-o-object-position:bottom center;object-position:bottom center}.full-width-image-banner--position-left
+	img {
+	-o-object-position: bottom center;
+	   object-position: bottom center;
+}
+.full-width-image-banner--position-left
 	.full-width-image-banner__image-wrapper
-	img{-o-object-position:left center;object-position:left center}.full-width-image-banner--position-right
+	img {
+	-o-object-position: left center;
+	   object-position: left center;
+}
+.full-width-image-banner--position-right
 	.full-width-image-banner__image-wrapper
-	img{-o-object-position:right center;object-position:right center}.full-width-image-banner__image-wrapper img[loading=lazy]{opacity:0;transition:opacity .3s ease-in-out}.full-width-image-banner__image-wrapper img[loading=lazy].loaded{opacity:1}@media (min-width:1200px){.full-width-image-banner__image-wrapper,.full-width-image-banner__image-wrapper img{min-height:400px}}@media (min-width:768px) and (max-width:1199px){.full-width-image-banner__image-wrapper,.full-width-image-banner__image-wrapper img{min-height:300px}}@media (max-width:767px){.full-width-image-banner__image-wrapper,.full-width-image-banner__image-wrapper img{min-height:250px}}@media print{.full-width-image-banner{left:auto;margin:0;position:static;right:auto;transform:none;width:100%}.full-width-image-banner__image-wrapper{max-height:300px}}
+	img {
+	-o-object-position: right center;
+	   object-position: right center;
+}
+/* Lazy loading optimization */
+.full-width-image-banner__image-wrapper img[loading="lazy"] {
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+}
+.full-width-image-banner__image-wrapper img[loading="lazy"].loaded {
+	opacity: 1;
+}
+/* Responsive height control */
+@media (min-width: 1200px) {
+	.full-width-image-banner__image-wrapper {
+		min-height: 400px;
+	}
+
+	.full-width-image-banner__image-wrapper img {
+		min-height: 400px;
+	}
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+	.full-width-image-banner__image-wrapper {
+		min-height: 300px;
+	}
+
+	.full-width-image-banner__image-wrapper img {
+		min-height: 300px;
+	}
+}
+@media (max-width: 767px) {
+	.full-width-image-banner__image-wrapper {
+		min-height: 250px;
+	}
+
+	.full-width-image-banner__image-wrapper img {
+		min-height: 250px;
+	}
+}
+/* Print styles */
+@media print {
+	.full-width-image-banner {
+		left: auto;
+		margin: 0;
+		position: static;
+		right: auto;
+		transform: none;
+		width: 100%;
+	}
+
+	.full-width-image-banner__image-wrapper {
+		max-height: 300px;
+	}
+}
+
+
+/*# sourceMappingURL=full-width-image-banner.css.map*/

@@ -1,15 +1,8 @@
 import jQuery from 'jquery';
 
 (function ($) {
-	// open mini-cart
-	const openMiniCart = () => {
-		$('#cart-drawer').addClass('open');
-		$('body').addClass('cart-drawer-open');
-	};
-
 	// close mini-cart
 	const closeMiniCart = () => {
-		$('#cart-drawer').removeClass('open');
 		$('body').removeClass('cart-drawer-open');
 	};
 
@@ -68,11 +61,6 @@ import jQuery from 'jquery';
 				}
 			},
 		});
-	});
-
-	// on cart item deleted.
-	$(document).on('removed_from_cart', function () {
-		openMiniCart();
 	});
 
 	// close drawer

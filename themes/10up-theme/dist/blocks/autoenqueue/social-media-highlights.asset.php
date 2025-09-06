@@ -1,1 +1,1 @@
-<?php return array('dependencies' => array(), 'version' => 'ba67a356b3e771a704b3');
+<?php return array('dependencies' => array('tenup-toolkit-react-refresh-runtime'), 'version' => 'f97ca994422be2cf5cad');

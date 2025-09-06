@@ -3,7 +3,6 @@ import jQuery from 'jquery';
 (function ($) {
 	// open mini-cart
 	const openMiniCart = () => {
-		$('#cart-drawer').addClass('open');
 		$('body').addClass('cart-drawer-open');
 	};
 
