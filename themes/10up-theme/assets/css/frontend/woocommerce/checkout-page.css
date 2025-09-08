@@ -1,0 +1,71 @@
+.woocommerce .woo_checkout__container .checkout{
+	margin-bottom:80px;
+}
+.woocommerce .woo_checkout__container .woocommerce-form-coupon-toggle,
+.woocommerce .woo_checkout__container .woocommerce-form-coupon
+{
+	font-size: 16px;
+}
+.woocommerce .woo_checkout__container #customer_details{
+	background-color: #F8EFE9;
+	border-radius: 20px;
+	padding:25px 30px;
+	font-size: 16px;
+}
+.woocommerce .woo_checkout__container #customer_details h3{
+	font-family: var(--wp--preset--font-family--satoshi);
+}
+
+.woocommerce .woo_checkout__container #order-review-wrapper{
+	background-color: var(--wp--preset--color--tertiary);
+	border-radius: 20px;
+	padding:25px 30px;
+	font-size: 16px;
+}
+
+.woocommerce .woo_checkout__container #order-review-wrapper table.shop_table{
+	border:none;
+	border-collapse: collapse;
+}
+.woocommerce .woo_checkout__container #order-review-wrapper  table.shop_table td,
+.woocommerce .woo_checkout__container #order-review-wrapper  table.shop_table th{
+	border-top:.5px solid var(--wp--preset--color--primary);
+}
+.woocommerce .woo_checkout__container #order-review-wrapper  table.shop_table thead th{
+	border-top:none;
+}
+
+.woocommerce .woo_checkout__container #order-review-wrapper .variation	{
+	margin:0;
+}
+.woocommerce .woo_checkout__container #order-review-wrapper .variation	.variation-wrapper{
+	display:flex;
+	align-items:center;
+	gap:10px;
+	font-weight: 400;
+	font-size: 14px;
+}
+.woocommerce .woo_checkout__container #order-review-wrapper .variation	dd{
+	margin-left:0;
+}
+.woocommerce .woo_checkout__container #order-review-wrapper .variation	dd p{
+	margin:0;
+}
+
+.woocommerce #payment #place_order, .woocommerce-page #payment #place_order{
+	float: none;
+	width: 100%;
+	text-align: center;
+	padding-top: 17px;
+	padding-bottom: 17px;
+	font-size: var(--wp--preset--font-size--medium);
+}
+.woocommerce #payment #place_order, .woocommerce-page #payment .woocommerce-info{
+	margin-bottom: 0;
+}
+
+
+.woocommerce-error, .woocommerce-info, .woocommerce-message{
+	font-size: 16px;
+	line-height: 1.2;
+}
