@@ -22,3 +22,8 @@
 		<a href="#main" class="skip-to-content-link visually-hidden-focusable"><?php esc_html_e( 'Skip to main content', 'tenup-theme' ); ?></a>
 
 		<main id="main" role="main" tabindex="-1">
+		<?php if(is_cart() || is_checkout()): ?>
+		<div class="container">
+			<?php echo do_shortcode( '[tsf_breadcrumb class="post-breadcrumbs"]' ); ?>
+		</div>
+		<?php endif; ?>

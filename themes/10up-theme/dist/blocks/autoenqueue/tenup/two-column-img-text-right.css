@@ -1,1 +1,70 @@
-.wp-block-tenup-two-column-img-text-right{align-items:center;display:flex;flex-flow:column;gap:39px}.wp-block-tenup-content,.wp-block-tenup-image{width:100%}.wp-block-tenup-content{padding-bottom:36px;text-align:center}.wp-block-tenup-title{color:var(--wp--preset--color--primary);font-size:var(--wp--preset--font-size--extra-large);font-weight:600;line-height:36px;margin-bottom:10px;margin-top:0;text-transform:uppercase}.wp-block-tenup-description{font-size:1.25rem;margin-bottom:32px;margin-top:0}@media (min-width:48em){.wp-block-tenup-two-column-img-text-right{align-items:center;display:flex;flex-flow:row;gap:75px;margin-bottom:61px}.wp-block-tenup-content,.wp-block-tenup-image{width:50%}.wp-block-tenup-content{text-align:left}.wp-block-tenup-title{line-height:64px;margin-bottom:10px;margin-top:0;text-align:left;text-transform:uppercase}.wp-block-tenup-description{font-size:1.5rem;margin-bottom:96px;margin-top:0}}
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./assets/css/blocks/tenup/two-column-img-text-right.css ***!
+  \*******************************************************************************************************************************************************************************************************************/
+.wp-block-tenup-two-column-img-text-right {
+	align-items: center;
+	display: flex;
+	flex-flow: column;
+	gap: 39px;
+}
+
+.wp-block-tenup-image,
+.wp-block-tenup-content {
+	width: 100%;
+}
+
+.wp-block-tenup-content {
+	text-align: center;
+	padding-bottom: 36px;
+}
+
+.wp-block-tenup-title {
+	color: var(--wp--preset--color--primary);
+	font-size: var(--wp--preset--font-size--extra-large);
+	font-weight: 600;
+	line-height: 36px;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	margin-top: 0;
+}
+
+.wp-block-tenup-description {
+	font-size: 1.25rem;
+	margin-bottom: 32px;
+	margin-top: 0;
+}
+
+@media (min-width: 48em) {
+	.wp-block-tenup-two-column-img-text-right {
+		align-items: center;
+		display: flex;
+		flex-flow: row;
+		gap: 75px;
+		margin-bottom: 61px;
+	}
+
+	.wp-block-tenup-image,
+	.wp-block-tenup-content {
+		width: 50%;
+	}
+
+	.wp-block-tenup-content {
+		text-align: left;
+	}
+
+	.wp-block-tenup-title {
+		line-height: 64px;
+		text-align: left;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+		margin-top: 0;
+	}
+	.wp-block-tenup-description {
+		font-size: 1.5rem;
+		margin-bottom: 96px;
+		margin-top: 0;
+	}
+}
+
+
+/*# sourceMappingURL=two-column-img-text-right.css.map*/

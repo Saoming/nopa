@@ -19,7 +19,7 @@ body.cart-drawer-open {
 	overflow: hidden;
 }
 
-#cart-drawer.open {
+body.cart-drawer-open #cart-drawer {
 	opacity: 1;
 	right: 0;
 	visibility: visible;
